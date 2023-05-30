@@ -1,17 +1,34 @@
 import React from 'react';
 import Slider from '../Slider';
 import VideoCard from '../VideoCard';
+import styled from 'styled-components';
 
-const Carrusel = ({ videos, borderColor }) => {
+const Title = styled.div`
+    width: 130px;
+    height: 46px;
+    color: white;
+    border-radius: 3px;
+    background: ${props => props.background};
+    margin: 3% 2%;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 41px;
+    display: inline-block;
+    padding: 8px;
+`;
 
-console.log(borderColor, "Desde Carrusel")
+const Carrusel = ({ videos, borderColor, title }) => {
   return (
-    <Slider borderColor={borderColor} >
-      {videos.map((video, index) => (
-        <VideoCard key={index} videoUrl={video.url} titulo={video.titulo} borderColor={borderColor}/>
-      ))}
-    </Slider>
+    <>
+      {title &&  <Title background={borderColor}>{title}</Title>}
+      <Slider borderColor={borderColor}>
+        {videos.map((video, index) => (
+          <VideoCard key={index} videoUrl={video.url} titulo={video.titulo} borderColor={borderColor} />
+        ))}
+      </Slider>
+    </>
   );
 };
+
 
 export default Carrusel;
