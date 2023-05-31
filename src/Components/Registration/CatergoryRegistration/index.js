@@ -113,7 +113,7 @@ const updateValue = (value, setValue) => {
   }, []);
 
   return (
-    <DefaultPage>
+    <>
       <Title>Nueva Categoría</Title>
       <form onSubmit={handleSubmit}>
         <TextField
@@ -159,7 +159,7 @@ const updateValue = (value, setValue) => {
         </DivSubBtn>
     </DivBotones>
       </form>
-    </DefaultPage>
+    </>
   );
 };
 

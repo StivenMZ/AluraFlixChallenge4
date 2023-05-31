@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link, useLocation } from 'react-router-dom';
 import Button from '../Button';
-import Logo from '../../Images/Logo.png'
+import Logo from '../../Images/Logo.png';
 
 const HeaderContainer = styled.header`
 /*1440 Width*/
@@ -27,11 +28,17 @@ const  Header =() => {
    
   };
 
+const location = useLocation();
+console.log(location)
+
   return (
     <HeaderContainer>
-      <LogoSt src={Logo} alt="Logo de Aluraflix" />
-      <Button text="Nuevo video" onClick={BtnNewVideo} textColor="#FFFFFF" backGround="#000000
-" borderColor="#F5F5F5"/>
+      <Link to="/"><LogoSt src={Logo} alt="Logo de Aluraflix" /> </Link>
+      {location.pathname == "/" && (
+      <Link to="/new-video">
+        <Button text="Nuevo video" textColor="#FFFFFF" backGround="#000000" borderColor="#F5F5F5" />
+      </Link>
+      )}
     </HeaderContainer>
   );
 }

@@ -3,6 +3,7 @@ import TextField from '../../TextField';
 import DefaultPage from '../../DefaultPage';
 import styled from 'styled-components';
 import Button from '../../Button';
+import { Link } from 'react-router-dom';
 
 const Title = styled.h1`
 
@@ -116,7 +117,7 @@ const updateValue = (value, setValue) => {
   }, []);
 
   return (
-    <DefaultPage>
+    <>
       <Title>Registro de Nuevo Video</Title>
       <form onSubmit={handleSubmit}>
         <TextField
@@ -173,11 +174,13 @@ const updateValue = (value, setValue) => {
         <Button borderColor={"#9E9E9E"} textColor={"#000000"} text={"Limpiar"} backGround={"#9E9E9E"}></Button>
         </DivSubBtn>
         <DivBtnSo>
+        <Link to="/new-category">
         <Button width={195} borderColor={"#2A7AE4"} textColor={"white"} text={"Nueva Categoría"} backGround={"#2A7AE4"}></Button>
+        </Link> 
        </DivBtnSo>
     </DivBotones>
       </form>
-    </DefaultPage>
+    </>
   );
 };
 
