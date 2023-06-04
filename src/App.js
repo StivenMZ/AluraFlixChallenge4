@@ -9,6 +9,7 @@ import RegistroVideo from './Components/Registration/VideoRegistration';
 import RegistroCategoria from './Components/Registration/CatergoryRegistration';
 import Home from './Components/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Succes from './Components/Succes';
 
 function App() {
 

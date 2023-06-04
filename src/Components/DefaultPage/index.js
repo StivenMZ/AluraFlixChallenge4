@@ -10,7 +10,6 @@ function App({children}) {
     <React.Fragment>
       <Header />
       {children}
-      {console.log(children)}
       <Footer />
     </React.Fragment>
   );

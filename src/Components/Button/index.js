@@ -22,7 +22,7 @@ const ButtonU = styled.button`
   }
 `;
 
-const Button = ({ text, onClick, textColor, backGround, borderColor, width }) => {
+const Button = ({ text, onClick, textColor, backGround, borderColor, width, type}) => {
   return (
     <ButtonU
       onClick={onClick}
@@ -30,6 +30,7 @@ const Button = ({ text, onClick, textColor, backGround, borderColor, width }) =>
       backGround={backGround}
       borderColor={borderColor}
       width={width}
+      type={type}
     >
       {text}
     </ButtonU>

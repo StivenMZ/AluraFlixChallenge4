@@ -8,6 +8,7 @@ const DivText = styled.div`
   margin-bottom: 2%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 `;
 
 const InputText = styled.input`
@@ -20,6 +21,7 @@ const InputText = styled.input`
   font-weight: 300;
   font-size: 12px;
   line-height: 14px;
+  align-self: center;
 
   &:focus {
     outline: none;
@@ -36,16 +38,28 @@ const InputText = styled.input`
 `;
 
 const SpanText = styled.span`
-  position: absolute;
-  top: 40%;
-  left: 3%;
   color: #E5E5E5;
   font-weight: 300;
   font-size: 12px;
   line-height: 14px;
+  position: relative;
+  top: 18%;
+  margin-left: 3%;
 `;
 
-const TextField = ({ placeholder, value, onChange, borderColor, type }) => {
+const ErrorMsg = styled.span`
+
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 19px;
+
+color: #E53935;
+margin-left: 3%;
+`
+
+
+const TextField = ({ placeholder, value, onChange, borderColor, type, error, valid }) => {
   return (
     <DivText>
       <SpanText>{placeholder}</SpanText>
@@ -55,6 +69,7 @@ const TextField = ({ placeholder, value, onChange, borderColor, type }) => {
         value={value}
         borderColor={borderColor}
       />
+      {valid !== true && valid !== null && <ErrorMsg>{error}</ErrorMsg>}
     </DivText>
   );
 };

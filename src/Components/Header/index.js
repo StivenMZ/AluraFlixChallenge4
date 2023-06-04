@@ -24,12 +24,10 @@ const LogoSt = styled.img`
 `;
 const  Header =() => {
   const BtnNewVideo = () => {   
-    console.log("1")
-   
   };
 
 const location = useLocation();
-console.log(location)
+
 
   return (
     <HeaderContainer>

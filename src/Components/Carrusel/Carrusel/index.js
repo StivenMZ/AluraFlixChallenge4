@@ -23,12 +23,12 @@ const Carrusel = ({ videos, borderColor, title }) => {
       {title &&  <Title background={borderColor}>{title}</Title>}
       <Slider borderColor={borderColor}>
         {videos.map((video, index) => (
-          <VideoCard key={index} videoUrl={video.url} titulo={video.titulo} borderColor={borderColor} />
+          <VideoCard key={index} src={video.urlImagen} videoUrl={video.urlVideo} titulo={video.titulo} borderColor={borderColor} />
         ))}
       </Slider>
     </>
   );
 };
 
-
+/*src, videoUrl, titulo, borderColor*/ 
 export default Carrusel;

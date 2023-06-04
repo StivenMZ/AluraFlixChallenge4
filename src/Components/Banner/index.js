@@ -4,7 +4,7 @@ import BannerImg from '../../Images/BannerImg.png'
 import BannerContent from './BannerContent';
 
 
-const Banner = () =>{
+const Banner = ({color}) =>{
 
     const BannerSection = styled.section`
     background-image: url(${BannerImg});
@@ -15,7 +15,7 @@ const Banner = () =>{
 
     return(
         <BannerSection>
-            <BannerContent />
+            <BannerContent color={color} />
         </BannerSection>
     )
 }
