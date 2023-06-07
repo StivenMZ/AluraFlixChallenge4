@@ -20,6 +20,15 @@ const ButtonU = styled.button`
   &:active {
     opacity: 0.55;
   }
+
+  @media screen and (max-width: 767px){
+    font-size: 2.4rem;
+    height: 5rem;
+    border-radius: 1rem;
+  
+          
+  }
+
 `;
 
 const Button = ({ text, onClick, textColor, backGround, borderColor, width, type}) => {

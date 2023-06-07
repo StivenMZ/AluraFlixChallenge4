@@ -1,10 +1,34 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useEffect, useState } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const SliderComponent = ({ children }) => {
-  const totalSlides = children.length;
-  const slidesToShow = totalSlides >= 3 ? 3.15 : totalSlides;
+
+  const [screen, setScreen] = useState(window.innerWidth);
+
+
+  const [slidesToShow, setSlidesToShow] = useState(3);
+  const [sliderWidth, setSliderWidth] = useState('95%');
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setSlidesToShow(1);
+        setSliderWidth('90%');
+      } else {
+        setSlidesToShow(3.1);
+        setSliderWidth('94%');
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const settings = {
     dots: true,
@@ -16,23 +40,16 @@ const SliderComponent = ({ children }) => {
   };
 
   return (
-    <Slider {...settings} style={{ marginLeft: '2%', marginBottom: '2%', width: "95%" }}>
+    <Slider {...settings} style={{ marginLeft: '2%', marginBottom: '2%', width: sliderWidth }}>
       {children.map((child, index) => (
-        <CustomSlide key={index}>
-          {child}
-        </CustomSlide>
+        <CustomSlide key={index}>{child}</CustomSlide>
       ))}
     </Slider>
   );
 };
 
 const CustomSlide = ({ children }) => {
-  // Aquí puedes personalizar el tamaño o las props de cada elemento dentro del slider
-  return (
-    <div style={{ width: "100%", height: "100%", padding: "10px" }}>
-      {children}
-    </div>
-  );
+  return <div style={{ width: '100%', height: '100%', padding: '10px' }}>{children}</div>;
 };
 
 export default SliderComponent;

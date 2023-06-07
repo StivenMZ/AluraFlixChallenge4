@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react"
 import Banner from "../Banner"
 import Carrusel from "../Carrusel/Carrusel"
+import Button from '../Button'
+import styled from "styled-components";
+import { Link, useLocation } from 'react-router-dom';
 
 const Home = () =>{
 const [videos, setVideos] = useState([]);
 const [categorias, setCategorias] = useState(null);
+const [scren, setScreen] = useState(window.innerWidth);
+
+
 
 useEffect(() => {
     const fetchCategorias = async () => {
@@ -44,14 +50,23 @@ useEffect(() => {
     };
 
     fetchVideos();
+    const handleResize = () => {
+      setScreen(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+
+
   }, []);
 
 const [primerApartadoVideos, setPrimerApartadoVideos] = useState(null);
 const primerApartado = categorias?.[0];
 useEffect(()=>{
-console.log(primerApartado);
 setPrimerApartadoVideos(videos.filter(video => video.category === primerApartado.name));
-console.log(primerApartadoVideos);
 }, [primerApartado])
 
 const first = ()=>{
@@ -62,7 +77,6 @@ const first = ()=>{
         videosF.push(video);
        } 
     })
-    console.log(videosF)
     return <Carrusel videos={videosF} borderColor={primerApartado.color} />
 }   else{
     return null
@@ -75,13 +89,12 @@ return (
       {first()}
       {categorias !== null ? (
         categorias.slice(1).map((categoria, index) => {
-        console.log(categoria);
           const push = videos.filter(video => video.category === categoria.name);
-          console.log(categoria.color, categoria.name )
           if(push.length > 0){
           return (
-            
+            <DivCarrusel>
             <Carrusel videos={push} borderColor={categoria.color} title={categoria.name} key={index} descripcion={categoria.descripcion} />
+            </DivCarrusel>
           );
         } else {
             return null
@@ -89,8 +102,18 @@ return (
     }
         )
       ) : null}
+
+    <Link to="/new-video">
+          <Button text="Nuevo video" textColor="#FFFFFF" backGround="#2A7AE4" borderColor="#2A7AE4" />
+    </Link>
+
+
     </>
   );
 };
+
+const DivCarrusel = styled.div`
+margin-bottom: 8%;
+`;
 
 export default Home;

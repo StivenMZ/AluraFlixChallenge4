@@ -20,53 +20,23 @@ const Title = styled.h1`
 
     
     color: #F5F5F5;
-    `;
-    
 
-const Options = styled.select`
- appearance: none;
-  -moz-appearance: none;
-width: 94%;
-border: none;
-height: 46px;
-font-weight: 300;
-    font-size: 12px;
-    line-height: 14px;
-    background: #53585D;
-  color: #E5E5E5;
-  border-radius: 4px;
+    @media screen and (max-width: 767px){
+font-size: 4.5rem;
+margin-top: 1%;
+
   
-
-  &:focus{
-    outline: none;
-    border-bottom: 3px solid #2A7AE4;
-    
 }
-`;
 
-const ElementOpt = styled.option`
-font-size: 12px;
+    `;  
 
-`;
-
-
-
-const DivOptions = styled.div`
-margin-top: 4%;
-margin-bottom: 2%;
-display: flex;
-width: 100%;
-justify-content: center;
-
-
-
-`;
 
 const DivBotones = styled.div`
 width: 100%;
 display: flex;
 justify-content: space-between;
 margin-bottom: 6%;
+
 `;
 
 const DivSubBtn = styled.div`
@@ -74,14 +44,16 @@ gap: 10%;
 width: 30%;
 display: flex;
 margin-left: 3%;
+
+@media screen and (max-width: 767px){
+justify-content: space-between;
+width: 90%;
+margin-left: 3.5%;
+
+}
+
 `
 ;
-
-const DivBtnSo = styled.div`
-display: flex;
-margin-right: 3%;
-
-`
 
 
 

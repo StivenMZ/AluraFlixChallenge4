@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import player from '../../Images/player.png';
 import VideoCard from '../Carrusel/VideoCard';
 
 const Content = styled.div`
@@ -8,12 +7,25 @@ const Content = styled.div`
   justify-content: space-between;
   position: relative;
   top: 43%;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
 `;
 
 const DivCard = styled.div`
   width: 30%;
   position: relative;
   right: 11%;
+  @media screen and (max-width: 767px) {
+  right: 0;
+  margin-bottom: 3%;
+  width: 90%;
+  height: 38.4rem;
+}
+
 `;
 
 const FrontTitle = styled.div`
@@ -30,6 +42,13 @@ const FrontTitle = styled.div`
   justify-content: center;
   padding: 0.625rem 0px;
   margin-bottom: 6%;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 3%;
+align-self: center;
+font-size: 4rem;
+ }
+
 `;
 
 const ContentSub = styled.h1`
@@ -40,6 +59,12 @@ const ContentSub = styled.h1`
   line-height: 3.375rem;
   color: #F5F5F5;
   width: 75%;
+
+  @media screen and (max-width: 767px) {
+ align-self: center;
+ font-size: 3.5rem;
+}
+
 `;
 
 const PhContent = styled.p`
@@ -50,6 +75,14 @@ const PhContent = styled.p`
   line-height: 1.3125rem;
   width: 73%;
   color: #F5F5F5;
+  @media screen and (max-width: 767px) {
+    align-self: center;
+    font-size: 2rem;
+    margin: 3% 0%;
+    line-height: 1.8rem;
+
+}
+
 `;
 
 const SubContent = styled.div`
@@ -59,6 +92,13 @@ const SubContent = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   gap: 0.875rem;
+
+  @media screen and (max-width: 767px) {
+  left: 0;
+  align-self: center;
+  gap: 0rem;
+ }
+
 `;
 
 const BannerContent = ({color}) => {

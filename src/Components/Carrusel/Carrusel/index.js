@@ -13,6 +13,13 @@ const Title = styled.div`
     line-height: 2.5625rem;
     display: inline-block;
     padding: 0.5rem;
+
+    @media screen and (max-width: 767px){
+      font-size: 3.1rem;
+      height: 3.5rem;
+      padding: 1.2rem;
+      border-radius: 0.8rem;
+    }
 `;
 
 const DivTitle = styled.div`
@@ -21,6 +28,11 @@ margin: 3% 2%;
 align-items: center;
 gap: 1%;
 
+@media screen and (max-width: 767px){
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 3% 5%;
+    }
 
 `
 
@@ -28,16 +40,27 @@ const DescTitle = styled.p`
 color: #F5F5F5;
 font-weight: 300;
 font-size: 1.125rem;
+@media screen and (max-width: 767px){
+   font-size: 2.1rem;
+   margin-top: 1%;
+
+    }
+
 
 `
 
 const DivTarjetas = styled.div`
 height: 16.303rem;
 width: 90%;
+
+@media screen and (max-width: 767px) {
+  height: 34.452rem;
+  width: 100%;
+  
+}
+
 `
 
-/* width: 432px;
-height: 260.85px; */
 
 const Carrusel = ({ videos, borderColor, title, descripcion }) => {
   return (
@@ -59,5 +82,4 @@ const Carrusel = ({ videos, borderColor, title, descripcion }) => {
   );
 };
 
-/*src, videoUrl, titulo, borderColor*/ 
 export default Carrusel;

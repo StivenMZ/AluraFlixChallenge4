@@ -98,6 +98,34 @@ const Global = createGlobalStyle`
   }
  }
 
+ @media screen and (max-width: 730px) {
+  html{
+    font-size: 8px;
+  }
+ }
+
+
+
+ @media screen and (max-width: 620px) {
+  html{
+    font-size: 7px;
+  }
+ }
+
+
+ @media screen and (max-width: 420px) {
+  html{
+    font-size: 6px;
+  }
+ }
+
+
+ @media screen and (max-width: 320px) {
+  html{
+    font-size: 5px;
+  }
+ }
+
 `;
 
 export default Global;

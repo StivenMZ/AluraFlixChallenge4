@@ -19,6 +19,12 @@ const Title = styled.h1`
 
     
     color: #F5F5F5;
+
+    @media screen and (max-width: 767px){
+      font-size: 4.5rem;
+      text-align: center;
+      line-height: 5rem;
+}
     `;
 
 
@@ -32,7 +38,7 @@ font-weight: 300;
     font-size: 0.75rem;
     line-height: 0.875rem;
     background: #53585D;
-  color: #E5E5E5;
+  color: #C2C2C2;
   border-radius: 0.25rem;
   align-self: center;
 
@@ -40,11 +46,26 @@ font-weight: 300;
     outline: none;
     border-bottom: 0.1875rem solid #2A7AE4;
     
+
 }
+
+@media screen and (max-width: 767px){
+  width: 96%;
+  height: 5rem;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
 `;
 
 const ElementOpt = styled.option`
 font-size: 0.75rem;
+
+@media screen and (max-width: 767px){
+  font-size: 2rem;
+  line-height: 2rem;
+  
+}
 
 `;
 
@@ -66,6 +87,12 @@ width: 100%;
 display: flex;
 justify-content: space-between;
 margin-bottom: 6%;
+
+@media screen and (max-width: 767px){
+  flex-direction: column;
+  
+}
+
 `;
 
 const DivSubBtn = styled.div`
@@ -73,12 +100,30 @@ gap: 10%;
 width: 30%;
 display: flex;
 margin-left: 3%;
+
+@media screen and (max-width: 767px){
+  display:flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-bottom: 2%;
+  margin-left: 4.3%;
+  
+}
+
 `
   ;
 
 const DivBtnSo = styled.div`
 display: flex;
 margin-right: 3%;
+
+@media screen and (max-width: 767px){
+  width: 100%;
+  align-self: center;
+  justify-content: center;
+
+  
+}
 
 `
 const ErrorCategoria = styled.span`
@@ -88,6 +133,11 @@ font-style: normal;
     line-height: 1.1875rem;
     color: rgb(229, 57, 53);
     margin-left: 3%;
+
+    @media screen and (max-width: 767px){
+      margin-top: 1%;
+      font-size: 1.3rem;
+}
 
 `;
 

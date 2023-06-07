@@ -12,6 +12,10 @@ const Banner = ({color}) =>{
     background-repeat: no-repeat;
     background-position: center;
     height: 52rem;
+    @media screen and (max-width: 767px) {
+    height: auto;
+}
+    
   `;
 
 
