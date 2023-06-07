@@ -7,24 +7,23 @@ import Logo from '../../Images/Logo.png';
 const HeaderContainer = styled.header`
 /*1440 Width*/
   display: flex;
+  width: 97%;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px;
+  justify-content: space-evenly;
+  gap: 70%;
+  padding: 1.39%;
   background: rgba(0, 0, 0, 0.9);
   border-bottom: 3px solid #2A7AE4;
-
 
 `;
 
 const LogoSt = styled.img`
-  width: 180.12px;
-  height: 54px;
+  width: 80%;
+  height: 3.375rem;
   position: relative;
   left: 2%;
 `;
 const  Header =() => {
-  const BtnNewVideo = () => {   
-  };
 
 const location = useLocation();
 

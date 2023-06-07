@@ -8,9 +8,11 @@ const Banner = ({color}) =>{
 
     const BannerSection = styled.section`
     background-image: url(${BannerImg});
-    height: 832px;
-
-    `;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 52rem;
+  `;
 
 
     return(

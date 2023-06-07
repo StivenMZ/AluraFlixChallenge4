@@ -11,44 +11,44 @@ const Content = styled.div`
 `;
 
 const DivCard = styled.div`
-  width: 646px;
-  height: 333.58px;
+  width: 30%;
   position: relative;
-  right: 2%;
+  right: 11%;
 `;
 
 const FrontTitle = styled.div`
   display: flex;
-  width: 296px;
+  width: 44.8%;
   color: white;
   font-style: normal;
   font-weight: 400;
-  font-size: 60px;
-  line-height: 70px;
+  font-size: 3.75rem;
+  line-height: 4.375rem;
   background: ${props=> props.color};
-  border-radius: 4px;
+  border-radius: 0.25rem;
   text-align: center;
   justify-content: center;
-  padding: 10px 0px;
-  margin-bottom: 12%;
+  padding: 0.625rem 0px;
+  margin-bottom: 6%;
 `;
 
 const ContentSub = styled.h1`
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 46px;
-  line-height: 54px;
+  font-size: 2.875rem;
+  line-height: 3.375rem;
   color: #F5F5F5;
+  width: 75%;
 `;
 
 const PhContent = styled.p`
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 21px;
-  width: 661px;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
+  width: 73%;
   color: #F5F5F5;
 `;
 
@@ -58,11 +58,8 @@ const SubContent = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 0.875rem;
 `;
-
-const PContent =
-  'Este challenge es una forma de aprendizaje. Es un mecanismo donde podrás comprometerte en la resolución de un problema para poder aplicar todos los conocimientos adquiridos en la formación React.';
 
 const BannerContent = ({color}) => {
   const [videos, setVideos] = useState([]);
@@ -126,8 +123,6 @@ const BannerContent = ({color}) => {
     console.log(videoMain);
   }, [videos, videoMain]);
 
-  console.log(categoriaMain);
-  console.log(color);
 
   return (
     <Content>
@@ -143,7 +138,6 @@ const BannerContent = ({color}) => {
             videoUrl={videoMain.urlVideo}
             titulo={videoMain?.titulo}
             borderColor={categoriaMain.color}
-            
           />
         </DivCard>
       )}

@@ -11,8 +11,8 @@ const Title = styled.h1`
 
     font-style: normal;
     font-weight: 400;
-    font-size: 60px;
-    line-height: 70px;
+    font-size: 3.75rem;
+    line-height: 4.375rem;
     
     display: flex;
     width: 100%;

@@ -10,8 +10,8 @@ const Title = styled.h1`
 
     font-style: normal;
     font-weight: 400;
-    font-size: 60px;
-    line-height: 70px;
+    font-size: 3.75rem;
+    line-height: 4.375rem;
     
     display: flex;
     width: 100%;
@@ -27,24 +27,24 @@ const Options = styled.select`
   -moz-appearance: none;
 width: 94%;
 border: none;
-height: 46px;
+height: 2.875rem;
 font-weight: 300;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
     background: #53585D;
   color: #E5E5E5;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   align-self: center;
 
   &:focus{
     outline: none;
-    border-bottom: 3px solid #2A7AE4;
+    border-bottom: 0.1875rem solid #2A7AE4;
     
 }
 `;
 
 const ElementOpt = styled.option`
-font-size: 12px;
+font-size: 0.75rem;
 
 `;
 
@@ -84,8 +84,8 @@ margin-right: 3%;
 const ErrorCategoria = styled.span`
 font-style: normal;
     font-weight: 300;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 1rem;
+    line-height: 1.1875rem;
     color: rgb(229, 57, 53);
     margin-left: 3%;
 

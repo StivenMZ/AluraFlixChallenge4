@@ -81,7 +81,7 @@ return (
           if(push.length > 0){
           return (
             
-            <Carrusel videos={push} borderColor={categoria.color} title={categoria.name} key={index} />
+            <Carrusel videos={push} borderColor={categoria.color} title={categoria.name} key={index} descripcion={categoria.descripcion} />
           );
         } else {
             return null

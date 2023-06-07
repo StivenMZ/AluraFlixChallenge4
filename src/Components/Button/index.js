@@ -2,16 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ButtonU = styled.button`
-  width: ${props => (props.width ? `${props.width}px` : "180.12px")};
-  height: 54px;
+  width: ${props => (props.width ? `${props.width}px` : "100%")};
+  height: 3.375rem;
   color: ${props => props.textColor};
   background-color: ${props => props.backGround};
-  border: 1px solid ${props => props.borderColor};
-  border-radius: 4px;
+  border: 0.0625rem solid ${props => props.borderColor};
+  border-radius: 0.25rem;
   cursor: pointer;
   font-weight: 600;
-  font-size: 21px;
-  line-height: 24px;
+  font-size: 1.3125rem;
+  line-height: 1.5rem;
 
   &:hover {
     opacity: 0.8;
