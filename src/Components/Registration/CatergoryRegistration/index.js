@@ -74,7 +74,6 @@ const RegistroCategoria = () => {
       });
 
       if (response.ok) {
-        // Actualizar la lista de categorías después de eliminar
         const updatedCategorias = categorias.filter((categoria) => categoria.id !== id);
         setCategorias(updatedCategorias);
       } else {
@@ -85,7 +84,6 @@ const RegistroCategoria = () => {
     }
   };
     
-   /*POP UP FINAL DE CONFIRMACIÓN*/
    const [showPopup, setShowPopup] = useState(false);
    const [showMessage, setShowMessage] = useState('');
 
@@ -204,7 +202,6 @@ const limpiarCampos = () =>{
   const [categorias, setCategorias] = useState([]);
 
   const handleUpdateCategory = (updatedCategory) => {
-    // Actualizar la categoría en el estado categories
     const updatedCategories = categorias.map((category) => {
       if (category.id === updatedCategory.id) {
         return updatedCategory; 
@@ -226,7 +223,6 @@ const limpiarCampos = () =>{
         if (response.ok) {
           const categoriasData = await response.json();
           setCategorias(categoriasData);
-          console.log(categorias);
         } else {
           console.log("Error al obtener las categorías");
         }

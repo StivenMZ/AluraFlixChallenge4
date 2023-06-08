@@ -158,10 +158,7 @@ const BannerContent = ({color}) => {
     fetchVideos();
   }, [categoriaMain.name]);
 
-  useEffect(() => {
-    console.log(videos);
-    console.log(videoMain);
-  }, [videos, videoMain]);
+ 
 
 
   return (

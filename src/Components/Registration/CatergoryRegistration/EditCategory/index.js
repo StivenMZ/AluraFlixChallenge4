@@ -23,7 +23,6 @@ const PopupContent = styled.div`
 `;
 
 const EditCategoryPopup = ({ category, onClose, updateCategory }) => {
-  console.log(category);
 
   const actualizarCategoria = async () => {
     try {

@@ -40,7 +40,6 @@ const Header = () => {
     const handleResize = () => {
       const windowWidth = window.innerWidth;
       setScreen(windowWidth);
-      console.log(windowWidth);
     };
 
     window.addEventListener('resize', handleResize);
@@ -50,8 +49,6 @@ const Header = () => {
     };
   }, []);
   
-  
-  console.log(screen); // Imprime el valor actualizado de screen
   
 
   return (
