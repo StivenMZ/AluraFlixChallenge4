@@ -155,7 +155,7 @@ const RegistroVideo = () => {
 
   const [enlaceVideo, setEnlaceVideo] = useState({ value: '', valid: null, error: '' });
 
-  const enlaceError = ["", "El enlace debe tener al menos un signo . y un signo /", "El enlace no puede ser menor a 3 carácteres",]
+  const enlaceError = ["", "El enlace debe tener al menos un signo . y un signo /", "El enlace no puede ser menor a 3 carácteres", "El enlace debe ser de youtube, debe contener el siguiente formato https://www.youtube.com/watch?v=", "El link de youtube está incompleto"]
   const [enlaceImagen, setEnlaceImagen] = useState({ value: '', valid: null, error: '' });
 
   const [descripcion, setDescripcion] = useState({ value: '', valid: null, error: '' });

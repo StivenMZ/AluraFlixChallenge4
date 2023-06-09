@@ -13,17 +13,26 @@ else{
 
 }
 
-export const validEnlace = (enlace) =>{
-    let length = enlace.length;
-    if(length <3){
-        return {valid: false, error: 2}
+export const validEnlace = (enlace) => {
+    if (!enlace.includes('https://www.youtube.com/watch?v=')) {
+      return { valid: false, error: 3 };
     }
-    else if (!(enlace.includes('.') && enlace.includes('/'))) {
-        return {valid: false, error: 1 }
-    } else{
-        return {valid: true, error: 0}  
+  
+    const videoId = enlace.slice('https://www.youtube.com/watch?v='.length);
+    if (videoId.length < 1) {
+      return { valid: false, error: 4 };
     }
+    
+    if (enlace.length < 3) {
+      return { valid: false, error: 2 };
+    } else if (!(enlace.includes('.') && enlace.includes('/'))) {
+      return { valid: false, error: 1 };
+    } else {
+      return { valid: true, error: 0 };
     }
+  };
+  
+  
 
     export const validDescripcion = (descripcion) =>{
         let length = descripcion.length;

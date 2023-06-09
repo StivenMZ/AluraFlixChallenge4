@@ -8,7 +8,7 @@ import { Link, useLocation } from 'react-router-dom';
 const Home = () =>{
 const [videos, setVideos] = useState([]);
 const [categorias, setCategorias] = useState(null);
-const [scren, setScreen] = useState(window.innerWidth);
+const [screen, setScreen] = useState(window.innerWidth);
 
 
 
@@ -102,10 +102,12 @@ return (
     }
         )
       ) : null}
+{screen < 769 && (
+  <Link to="/new-video">
+    <Button text="Nuevo video" textColor="#FFFFFF" backGround="#2A7AE4" borderColor="#2A7AE4" />
+  </Link>
+)}
 
-    <Link to="/new-video">
-          <Button text="Nuevo video" textColor="#FFFFFF" backGround="#2A7AE4" borderColor="#2A7AE4" />
-    </Link>
 
 
     </>
